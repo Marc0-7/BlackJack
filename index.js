@@ -6,7 +6,7 @@ function OnLine()
 //mazzo di carte, Picche = \u2660, Cuori = \u2665, Quadri = \u2666, Fiori = \u2663
 let carte = 
 [
-    {nome: "A_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "A_cuori", img: Object.assign(new Image(), {src: "./Blackjack/img/ace_of_hearts"})},
     {nome: "2_cuori", img: Object.assign(new Image(), {src: ""})},
     {nome: "3_cuori", img: Object.assign(new Image(), {src: ""})},
     {nome: "4_cuori", img: Object.assign(new Image(), {src: ""})},
