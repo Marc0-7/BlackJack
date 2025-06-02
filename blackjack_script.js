@@ -63,13 +63,13 @@ let carte =
     {nome: "Q_quadri", img: Object.assign(new Image(), {src: ""})},
     {nome: "K_quadri", img: Object.assign(new Image(), {src: ""})},
 
-]
+];
 for (let i = 0; i < carte.length; i++)
 {
 
 }
 //.
-//giocatori
+//dichiaro i giocatori giocatori
 let player = [], bot1 = [], bot2 = [], bot3 = [];
 //carta random dal mazzo
 function daiCarte()
@@ -78,8 +78,17 @@ function daiCarte()
     for(let i = 0; i < carte.length; i++)
     {
         if(dim == 0)
-            return carte[i];
+            return carte[i].nome;
         dim--;
     }
 }
 
+function gioca()
+{
+    
+}
+//funzione reset (bot)
+function reset()
+{
+
+}
