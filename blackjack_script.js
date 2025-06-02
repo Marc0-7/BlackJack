@@ -58,12 +58,9 @@ let carte =
     {nome: "J_quadri", img: Object.assign(new Image(), {src: ""})},
     {nome: "Q_quadri", img: Object.assign(new Image(), {src: ""})},
     {nome: "K_quadri", img: Object.assign(new Image(), {src: ""})}];
-
 //dichiaro i giocatori (denaro, carte)
 let player = {denaro: 50, puntata: 0, carte: []}, bot1 = {denaro: 50, puntata: 0, carte: []},
 bot2 = {denaro: 50, puntata: 0, carte: []}, bot3 = {denaro: 50, puntata: 0, carte: []};
-
-
 //carta random dal mazzo
 function daiCarte()
 {
@@ -75,17 +72,14 @@ function daiCarte()
         dim--;
     }
 }
-
 //funzione OnLine
 function OnLine()
 {
     alert("prossimamente...")
 }
-
 //funzione partita
 function gioca()
 {
     document.getElementById("bottoneGioca").remove();
-    prompt("Inserisci la tua puntata: ");
+    prompt("Inserisci la tua puntata:");
 }
-
