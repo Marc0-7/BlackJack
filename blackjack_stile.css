@@ -28,9 +28,10 @@ header
         cursor: pointer;
     }
 }
+
 /*partita*/
 /*area giocatori*/
-#section1
+#areaGiocatori
 {
     background-color: darkgray;
     border-radius: 10px;
@@ -39,7 +40,7 @@ header
     margin-top: 30px;
 }
 /*area tavolo*/
-#section2
+#tavolo
 {
     background-color: darkgreen;
     border-radius: 25px;
@@ -49,4 +50,32 @@ header
     margin-top: 20px;
     width: 800px;
     height: 500px;
-}    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*immagine mazzo di carte*/
+    img
+    {
+        width: 280px;
+        height: auto;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    /*bottone gioca*/
+    button
+    {
+        font-size: 40px;
+        background-color: black;
+        color: aliceblue;
+        border-radius: 20px;
+    }
+    button:hover
+    {
+        background-color: aliceblue;
+        color: black;
+        cursor: pointer;
+    }
+}  
+
