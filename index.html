@@ -1,8 +1,8 @@
 <html>
 <head>
     <!--collegamento file css e js-->
-    <link rel="stylesheet" href="blackjack_stile.css">
-    <script src="blackjack_script.js" defer></script>
+    <link rel="stylesheet" href="blackjack.css">
+    <script src="blackjack.js" defer></script>
     <!--meta tag-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +14,15 @@
     <header>
         <h1>BlackJack</h1>
         <div>
-            <button type="button">Bot</button>
+            <button type="button" onclick="reset()">Bot</button>
             <button type="button" onclick="OnLine()">On-Line</button>
         </div>        
     </header>
     <!--partita!-->
     <!--zonagiocatori-->
-    <section id="section1">
+    <section id="areaGiocatori">
         <div id="player">
+
             
         </div>
         <div id="bot1">
@@ -34,8 +35,9 @@
 
         </div>
         <!--tavolo-->
-        <section id="section2">
-
+        <section id="tavolo">
+            <img src="c:\Users\HP ELITEBOOK\Desktop\ersitomio\blackjack\Carte_da_gioco\mazzo-carte-ritagliato-removebg-preview.png" alt="mazzo di carte">
+            <button onclick="gioca()">Gioca!</button>
         </section>
     </section>
 </body>
