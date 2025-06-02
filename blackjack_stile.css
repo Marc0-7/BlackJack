@@ -28,7 +28,6 @@ header
         cursor: pointer;
     }
 }
-
 /*partita*/
 /*area giocatori*/
 #areaGiocatori
@@ -104,12 +103,9 @@ header
         cursor: pointer;
     }
 } 
-
-
 /*area footer*/
 footer
 {
     background-color: black;
     color: aliceblue;
 }
-
