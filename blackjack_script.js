@@ -7,7 +7,7 @@ function OnLine()
 let carte = 
 [
     //cuori
-    {nome: "A_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "A_cuori", img: Object.assign(new Image(), {src: "./img/ace_of_hearts"})},
     {nome: "2_cuori", img: Object.assign(new Image(), {src: ""})},
     {nome: "3_cuori", img: Object.assign(new Image(), {src: ""})},
     {nome: "4_cuori", img: Object.assign(new Image(), {src: ""})},
