@@ -14,31 +14,34 @@
     <header>
         <h1>BlackJack</h1>
         <div>
-            <button type="button" onclick="reset()">Bot</button>
+            <button type="button" onclick="location.reload()">Bot</button>
             <button type="button" onclick="OnLine()">On-Line</button>
         </div>        
     </header>
     <!--partita!-->
     <!--zonagiocatori-->
     <section id="areaGiocatori">
-        <div id="player">
-
-            
+        <div id="giocatore">
+            <h2>Tu</h2>
         </div>
         <div id="bot1">
-
+            <h2>Bot1</h2>
         </div>
         <div id="bot2">
-
+            <h2>Bot2</h2>
         </div>
         <div id="bot3">
-
+            <h2>Bot3</h2>
         </div>
         <!--tavolo-->
         <section id="tavolo">
             <img src="./img/mazzo-carte-ritagliato-removebg-preview.png" alt="mazzo di carte">
-            <button onclick="gioca()">Gioca!</button>
+            <button id="bottoneGioca" onclick="gioca()">Gioca!</button>
         </section>
     </section>
+    <!--footer-->
+    <footer>
+
+    </footer>
 </body>
 </html>
