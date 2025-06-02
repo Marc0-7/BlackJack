@@ -1,42 +1,85 @@
-<html>
-<head>
-    <!--collegamento file css e js-->
-    <link rel="stylesheet" href="blackjack.css">
-    <script src="blackjack.js" defer></script>
-    <!--meta tag-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--titolo-->
-    <title>BlackJack</title>
-</head>
-<body>
-    <!--header-->
-    <header>
-        <h1>BlackJack</h1>
-        <div>
-            <button type="button">Bot</button>
-            <button type="button" onclick="OnLine()">On-Line</button>
-        </div>        
-    </header>
-    <!--partita!-->
-    <!--zonagiocatori-->
-    <section id="section1">
-        <div id="player">
-            
-        </div>
-        <div id="bot1">
+//header
+function OnLine()
+{
+    alert("prossimamente...")
+}
+//mazzo di carte, Picche = \u2660, Cuori = \u2665, Quadri = \u2666, Fiori = \u2663
+let carte = 
+[
+    //cuori
+    {nome: "A_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "2_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "3_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "4_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "5_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "6_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "7_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "8_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "9_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "10_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "J_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "Q_cuori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "K_cuori", img: Object.assign(new Image(), {src: ""})},
+    //fiori
+    {nome: "A_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "2_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "3_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "4_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "5_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "6_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "7_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "8_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "9_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "10_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "J_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "Q_fiori", img: Object.assign(new Image(), {src: ""})},
+    {nome: "K_fiori", img: Object.assign(new Image(), {src: ""})},
+    //picche
+        {nome: "A_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "2_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "3_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "4_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "5_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "6_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "7_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "8_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "9_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "10_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "J_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "Q_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "K_picche", img: Object.assign(new Image(), {src: ""})},
+    //quadri
+    {nome: "A_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "2_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "3_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "4_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "5_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "6_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "7_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "8_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "9_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "10_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "J_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "Q_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "K_quadri", img: Object.assign(new Image(), {src: ""})},
 
-        </div>
-        <div id="bot2">
+]
+for (let i = 0; i < carte.length; i++)
+{
 
-        </div>
-        <div id="bot3">
+}
+//.
+//giocatori
+let player = [], bot1 = [], bot2 = [], bot3 = [];
+//carta random dal mazzo
+function daiCarte()
+{
+    let dim = (Math.floor(Math.random() * carte.length));
+    for(let i = 0; i < carte.length; i++)
+    {
+        if(dim == 0)
+            return carte[i];
+        dim--;
+    }
+}
 
-        </div>
-        <!--tavolo-->
-        <section id="section2">
-
-        </section>
-    </section>
-</body>
-</html>
