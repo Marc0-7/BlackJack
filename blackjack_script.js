@@ -1,13 +1,9 @@
-//header
-function OnLine()
-{
-    alert("prossimamente...")
-}
-//mazzo di carte, Picche = \u2660, Cuori = \u2665, Quadri = \u2666, Fiori = \u2663
+//mazzo di carte
+//Picche = \u2660, Cuori = \u2665, Quadri = \u2666, Fiori = \u2663
 let carte = 
 [
     //cuori
-    {nome: "A_cuori", img: Object.assign(new Image(), {src: "./img/ace_of_hearts"})},
+    {nome: "A_cuori", img: Object.assign(new Image(), {src: ""})},
     {nome: "2_cuori", img: Object.assign(new Image(), {src: ""})},
     {nome: "3_cuori", img: Object.assign(new Image(), {src: ""})},
     {nome: "4_cuori", img: Object.assign(new Image(), {src: ""})},
@@ -35,7 +31,7 @@ let carte =
     {nome: "Q_fiori", img: Object.assign(new Image(), {src: ""})},
     {nome: "K_fiori", img: Object.assign(new Image(), {src: ""})},
     //picche
-        {nome: "A_picche", img: Object.assign(new Image(), {src: ""})},
+    {nome: "A_picche", img: Object.assign(new Image(), {src: ""})},
     {nome: "2_picche", img: Object.assign(new Image(), {src: ""})},
     {nome: "3_picche", img: Object.assign(new Image(), {src: ""})},
     {nome: "4_picche", img: Object.assign(new Image(), {src: ""})},
@@ -61,16 +57,13 @@ let carte =
     {nome: "10_quadri", img: Object.assign(new Image(), {src: ""})},
     {nome: "J_quadri", img: Object.assign(new Image(), {src: ""})},
     {nome: "Q_quadri", img: Object.assign(new Image(), {src: ""})},
-    {nome: "K_quadri", img: Object.assign(new Image(), {src: ""})},
+    {nome: "K_quadri", img: Object.assign(new Image(), {src: ""})}];
 
-];
-for (let i = 0; i < carte.length; i++)
-{
+//dichiaro i giocatori (denaro, carte)
+let player = {denaro: 50, puntata: 0, carte: []}, bot1 = {denaro: 50, puntata: 0, carte: []},
+bot2 = {denaro: 50, puntata: 0, carte: []}, bot3 = {denaro: 50, puntata: 0, carte: []};
 
-}
-//.
-//dichiaro i giocatori giocatori
-let player = [], bot1 = [], bot2 = [], bot3 = [];
+
 //carta random dal mazzo
 function daiCarte()
 {
@@ -83,12 +76,16 @@ function daiCarte()
     }
 }
 
+//funzione OnLine
+function OnLine()
+{
+    alert("prossimamente...")
+}
+
+//funzione partita
 function gioca()
 {
-    
+    document.getElementById("bottoneGioca").remove();
+    prompt("Inserisci la tua puntata: ");
 }
-//funzione reset (bot)
-function reset()
-{
 
-}
