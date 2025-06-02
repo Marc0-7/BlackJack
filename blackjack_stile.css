@@ -38,6 +38,31 @@ header
     padding-top: 100px;
     padding-bottom: 100px;
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*giocatori*/
+
+    #giocatore
+    {
+        position: absolute;
+        bottom: -245px;
+    }
+    #bot1
+    {
+        position: absolute;
+        left: 170px;
+    }
+    #bot2
+    {
+        position: absolute;
+        top: 240px;
+    }
+    #bot3
+    {
+        position: absolute;
+        right: 170px;
+    }
 }
 /*area tavolo*/
 #tavolo
@@ -62,6 +87,7 @@ header
         position: absolute;
         top: 0px;
         right: 0px;
+
     }
     /*bottone gioca*/
     button
@@ -77,5 +103,13 @@ header
         color: black;
         cursor: pointer;
     }
-}  
+} 
+
+
+/*area footer*/
+footer
+{
+    background-color: black;
+    color: aliceblue;
+}
 
