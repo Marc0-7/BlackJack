@@ -45,7 +45,7 @@ header
     #giocatore
     {
         position: absolute;
-        bottom: -245px;
+        top: 805px;
     }
     #bot1
     {
