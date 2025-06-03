@@ -58,13 +58,36 @@ let carte =
     {nome: "J_quadri", img: Object.assign(new Image(), {src: ""})},
     {nome: "Q_quadri", img: Object.assign(new Image(), {src: ""})},
     {nome: "K_quadri", img: Object.assign(new Image(), {src: ""})}];
+
 //dichiaro i giocatori (denaro, carte)
-let player = {denaro: 50, puntata: 0, carte: []}, bot1 = {denaro: 50, puntata: 0, carte: []},
-bot2 = {denaro: 50, puntata: 0, carte: []}, bot3 = {denaro: 50, puntata: 0, carte: []};
+let giocatore = {denaro: 50, puntata: 0, carte: []},
+    bot1 = {denaro: 50, puntata: 0, carte: []},
+    bot2 = {denaro: 50, puntata: 0, carte: []},  
+    bot3 = {denaro: 50, puntata: 0, carte: []};
+
+//statistiche iniziali
+document.getElementById("denaroGiocatore").textContent = giocatore.denaro;
+document.getElementById("denaroBot1").textContent = bot1.denaro;
+document.getElementById("denaroBot2").textContent = bot2.denaro;
+document.getElementById("denaroBot3").textContent = bot3.denaro; 
+document.getElementById("puntataGiocatore").textContent = giocatore.puntata;
+document.getElementById("puntataBot1").textContent = bot1.puntata;
+document.getElementById("puntataBot2").textContent = bot2.puntata;
+document.getElementById("puntataBot3").textContent = bot3.puntata;
+
+//funzione random
+let rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+//funzione ferma tempo
+function sleep(ms)
+{
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 //carta random dal mazzo
 function daiCarte()
 {
-    let dim = (Math.floor(Math.random() * carte.length));
+    let dim = rand(0, carte.length);
     for(let i = 0; i < carte.length; i++)
     {
         if(dim == 0)
@@ -72,14 +95,43 @@ function daiCarte()
         dim--;
     }
 }
+
 //funzione OnLine
 function OnLine()
 {
     alert("prossimamente...")
 }
-//funzione partita
-function gioca()
+
+//funzione partita (main)
+async function gioca()
 {
+    //elimina bottone "gioca"
     document.getElementById("bottoneGioca").remove();
-    prompt("Inserisci la tua puntata:");
+
+    //creazione nuovi elementi (Dealer)
+    let h2 = document.createElement("h2");
+    h2.textContent = "Dealer";
+    h2.style.left = "20px";
+    h2.style.fontSize = "40px";
+    document.getElementById("tavolo").appendChild(h2);
+
+    //caricamento (random) puntate bot
+    bot1.puntata = rand(1, bot1.denaro);
+    document.getElementById("puntataBot1").textContent = bot1.puntata;
+    bot2.puntata = rand(1, bot2.denaro);
+    document.getElementById("puntataBot2").textContent = bot2.puntata;
+    bot3.puntata = rand(1, bot3.denaro);
+    document.getElementById("puntataBot3").textContent = bot3.puntata;
+    alert("bot1 punta " + bot1.puntata + ", bot2 punta " + bot2.puntata + " e bot3 punta " + bot3.puntata);
+
+    //puntata giocatore
+    giocatore.puntata = prompt("Inserisci la tua puntata");
+    do
+    {
+        if(giocatore.puntata > giocatore.denaro || giocatore.puntata < 1)
+            giocatore.puntata = prompt("puntata scorretta! riprova");
+    }
+    while(giocatore.puntata > giocatore.denaro || giocatore.puntata < 1);
+    document.getElementById("puntataGiocatore").textContent = giocatore.puntata;
+
 }
