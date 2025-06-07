@@ -64,28 +64,6 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
-    /*giocatori*/
-
-    #giocatore
-    {
-        position: absolute;
-        top: 935px;
-    }
-    #bot1
-    {
-        position: absolute;
-        left: 170px;
-    }
-    #bot2
-    {
-        position: absolute;
-        top: 395px;
-    }
-    #bot3
-    {
-        position: absolute;
-        right: 170px;
-    }
 }
 /*area tavolo*/
 #tavolo
@@ -102,6 +80,28 @@ header
     justify-content: center;
     align-items: center;
 
+    /*nomi giocatori*/
+    #giocatore
+    {
+        position: absolute;
+        bottom: 10px;
+    }
+    #bot1
+    {
+        position: absolute;
+        left: -60px;
+    }
+    #bot2
+    {
+        position: absolute;
+        top: -50px;
+    }
+    #bot3
+    {
+        position: absolute;
+        right: -10px;
+    }
+    
     /*immagine mazzo di carte*/
     img
     {
