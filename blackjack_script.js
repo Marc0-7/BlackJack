@@ -134,4 +134,13 @@ async function gioca()
     while(giocatore.puntata > giocatore.denaro || giocatore.puntata < 1);
     document.getElementById("puntataGiocatore").textContent = giocatore.puntata;
 
+    //creazione nuovi elementi (Dealer)
+    let h2 = document.createElement("h2");
+    h2.textContent = "Dealer";
+    h2.style.left = "20px";
+    h2.style.fontSize = "40px";
+    document.getElementById("tavolo").appendChild(h2);
+
+    //aggiunta carte del dealer
+    document.getElementById("tavolo").appendChild(carte[1].src);
 }
