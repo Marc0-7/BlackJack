@@ -99,7 +99,7 @@ function daiCarte()
 //funzione OnLine
 function OnLine()
 {
-    alert("prossimamente...")
+    alert("prossimamente...");
 }
 
 //funzione partita (main)
@@ -142,5 +142,4 @@ async function gioca()
     document.getElementById("tavolo").appendChild(h2);
 
     //aggiunta carte del dealer
-    document.getElementById("tavolo").appendChild(carte[1].src);
 }
