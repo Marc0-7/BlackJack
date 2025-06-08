@@ -105,7 +105,7 @@ header
     /*immagine mazzo di carte*/
     #mazzoCarte
     {
-        width: 280px;
+        width: 30%;
         height: auto;
         position: absolute;
         top: 0px;
