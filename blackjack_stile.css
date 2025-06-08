@@ -103,7 +103,7 @@ header
     }
     
     /*immagine mazzo di carte*/
-    img
+    #mazzoCarte
     {
         width: 280px;
         height: auto;
@@ -119,14 +119,14 @@ header
         left: 0px;
     }
     /*bottone gioca*/
-    button
+    #bottoneGioca
     {
         font-size: 40px;
         background-color: black;
         color: aliceblue;
         border-radius: 20px;
     }
-    button:hover
+    #bottoneGioca:hover
     {
         background-color: aliceblue;
         color: black;
