@@ -108,13 +108,6 @@ async function gioca()
     //elimina bottone "gioca"
     document.getElementById("bottoneGioca").remove();
 
-    //creazione nuovi elementi (Dealer)
-    let h2 = document.createElement("h2");
-    h2.textContent = "Dealer";
-    h2.style.left = "20px";
-    h2.style.fontSize = "40px";
-    document.getElementById("tavolo").appendChild(h2);
-
     //caricamento (random) puntate bot
     bot1.puntata = rand(1, bot1.denaro);
     document.getElementById("puntataBot1").textContent = bot1.puntata;
