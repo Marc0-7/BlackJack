@@ -133,5 +133,9 @@ async function gioca()
     h2.style.left = "20px";
     h2.style.fontSize = "40px";
     document.getElementById("tavolo").appendChild(h2);
-    
+
+    //creazione carte del dealer
+    let cartaDealer1 = document.createElement("img");
+    cartaDealer1.src = "carte[0].src";
+
 }
