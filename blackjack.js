@@ -136,5 +136,4 @@ async function gioca()
 
     //creazione carte del dealer
     let cartaDealer1 = document.createElement("img");
-    cartaDealer1.src = carte[0].src;
 }
