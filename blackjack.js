@@ -3,7 +3,7 @@
 let carte = 
 [
     //cuori
-    {nome: "A_cuori", src: "./img/ace_of_hearts.png"},
+    {nome: "A_cuori", img: Object.assign(new Image(), {src: "./img/ace_of_hearts.png"})},
     {nome: "2_cuori", img: Object.assign(new Image(), {src: "./img/2_of_hearts.png"})},
     {nome: "3_cuori", img: Object.assign(new Image(), {src: "./img/3_of_hearts.png"})},
     {nome: "4_cuori", img: Object.assign(new Image(), {src: "./img/4_of_hearts.png"})},
